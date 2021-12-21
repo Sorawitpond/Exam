@@ -1,0 +1,30 @@
+<html>
+
+<head> Sum of a range </head>
+
+<body>
+    <script>
+        function range() {
+            var array = [];
+            var lower = Math.min.apply(null, arguments);
+            var upper = Math.max.apply(null, arguments);
+
+            for (var i = lower; i <= upper; i++) {
+                array.push(i);
+            }
+            return array;
+        }
+
+        function sum(array) {
+            return array.reduce((x, y) => x + y, 0);
+        }
+        document.write('range (1,10) \xa0\xa0 :' + range(1, 10) + '<br>');
+        document.write('range (5,2,-1)  \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0:' +
+            range(5, 2, -1) + '<br>');
+        document.write('sum (range 1,10)\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0:' +
+            sum(range(1, 10)) + '<br>');
+    </script>
+
+</body>
+
+</html>

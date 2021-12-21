@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    ConvertNumtoRoman<br>
+</head>
+
+<body>
+    <p id="sum1"></p>
+    <p id="sum2"></p>
+    <p id="sum3"></p>
+    <p id="sum4"></p>
+    <script>
+        function ConvertRoman(num) {
+            var roman = {
+                M: 1000,
+                CM: 900,
+                D: 500,
+                CD: 400,
+                C: 100,
+                XC: 90,
+                L: 50,
+                XL: 40,
+                X: 10,
+                IX: 9,
+                V: 5,
+                IV: 4,
+                I: 1
+            };
+            var str = '';
+
+            for (var i of Object.keys(roman)) {
+
+                var q = Math.floor(num / roman[i]);
+
+                num -= q * roman[i];
+
+                str += i.repeat(q);
+
+            }
+
+            return str;
+        }
+        document.getElementById('sum1').innerHTML = "16 : " + ConvertRoman(16)
+        document.getElementById('sum2').innerHTML = "29 : " + ConvertRoman(29)
+        document.getElementById('sum3').innerHTML = "99 : " + ConvertRoman(99)
+        document.getElementById('sum4').innerHTML = "501 : " + ConvertRoman(501)
+    </script>
+</body>
+
+
+</html>

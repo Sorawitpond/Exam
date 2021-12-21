@@ -1,0 +1,19 @@
+<head>
+    Chessborad
+</head>
+
+<body>
+    <h1>แสดงผลบน console</h1>
+    <script>
+        var size = window.prompt("Enter Size");
+        for (var i = 0; i < size; i++) {
+            var line = ' ';
+
+            for (var j = 0; j < size; j++) {
+                line += (i + j + 1) % 2 ? ' ' : '#';
+            }
+
+            console.log(line);
+        }
+    </script>
+</body>
