@@ -1,0 +1,36 @@
+<html>
+
+<head> Sum of a range </head>
+
+<body>
+    <script>
+        function range(start, stop, step) {
+            var a = [];
+            var step = step || 1;
+            if (start < stop) {
+                for (var i = start; i <= stop; i += step) {
+                    a.push(i);
+                }
+            } else {
+                for (var i = start; i >= stop; i += step) {
+                    a.push(i);
+                }
+            }
+            return a;
+        }
+
+        function sum(array) {
+            var re = 0;
+            for (var i = 0; i < array.length; i++) {
+                re += array[i];
+            }
+            return re;
+        }
+        console.log('range (1,10) :' + range(1, 10));
+        console.log('range (5,2,-1) :' + range(5, 2, -1));
+        console.log('sum (range 1,10):' + sum(range(1, 10)));
+    </script>
+
+</body>
+
+</html>
